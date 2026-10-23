@@ -53,8 +53,20 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 py-12 border-b border-neutral-800">
           {/* Col 1: Brand & About */}
           <div className="lg:col-span-1">
-            <Link to="/" className="inline-block mb-4">
-              <img src="/assets/brand/hero-logo.svg" alt="Hero MotoCorp" className="h-9 w-auto brightness-200" />
+            <Link to="/" className="flex items-center gap-3 mb-5 group">
+              <img
+                src="/assets/hero-logo.jpeg"
+                alt="Kosmo Hero MotoCorp"
+                className="h-12 w-12 rounded-full object-cover shadow-md ring-2 ring-white/10 shrink-0 group-hover:scale-105 transition-transform"
+              />
+              <div className="flex flex-col">
+                <span className="text-sm font-black uppercase tracking-wider text-white font-display">
+                  Hero MotoCorp
+                </span>
+                <span className="text-[10px] font-bold text-[#ee2326] uppercase tracking-wider">
+                  Kosmo Dealership Punjab
+                </span>
+              </div>
             </Link>
             <p className="text-xs text-gray-400 leading-relaxed mb-4">
               Kosmo Hero is Punjab&apos;s premier authorized dealership network, delivering reliable Hero two-wheelers, certified workshop service, and transparent ownership.

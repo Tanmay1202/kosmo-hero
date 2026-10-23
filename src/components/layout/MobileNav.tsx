@@ -21,8 +21,12 @@ export const MobileNav: React.FC<MobileNavProps> = ({ isOpen, onClose }) => {
         <div>
           {/* Top Header */}
           <div className="p-4 border-b border-gray-100 flex items-center justify-between bg-neutral-900 text-white">
-            <div className="flex items-center gap-2">
-              <img src="/assets/brand/hero-icon.svg" alt="Hero" className="w-7 h-7" />
+            <div className="flex items-center gap-2.5">
+              <img
+                src="/assets/hero-logo.jpeg"
+                alt="Kosmo Hero"
+                className="w-8 h-8 rounded-full object-cover ring-1 ring-white/20 shrink-0"
+              />
               <span className="font-black uppercase tracking-wider text-sm">Kosmo Hero Menu</span>
             </div>
             <button

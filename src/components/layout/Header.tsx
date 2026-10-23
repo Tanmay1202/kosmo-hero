@@ -47,17 +47,17 @@ export const Header: React.FC = () => {
             {/* Brand Logo & Dealership Attribution */}
             <Link to="/" className="flex items-center gap-3 group">
               <img
-                src="/assets/brand/hero-logo.svg"
-                alt="Hero MotoCorp"
-                className="h-9 sm:h-10 w-auto object-contain transition-transform group-hover:scale-[1.02]"
+                src="/assets/hero-logo.jpeg"
+                alt="Kosmo Hero MotoCorp Dealership"
+                className="h-11 w-11 sm:h-12 sm:w-12 rounded-full object-cover shadow-sm ring-1 ring-gray-200 shrink-0 transition-transform duration-200 group-hover:scale-105"
               />
-              <div className="h-8 w-px bg-gray-300 hidden sm:block"></div>
-              <div className="hidden sm:flex flex-col">
-                <span className="text-xs font-black tracking-widest text-[#181818] uppercase">
-                  Kosmo Dealership
+              <div className="h-8 w-px bg-gray-200 hidden sm:block"></div>
+              <div className="flex flex-col justify-center">
+                <span className="text-sm sm:text-base font-black tracking-wider text-[#181818] uppercase font-display leading-tight">
+                  Hero MotoCorp
                 </span>
-                <span className="text-[10px] font-semibold text-gray-500 uppercase tracking-wider">
-                  Punjab • Jalandhar • Ludhiana
+                <span className="text-[10px] sm:text-[11px] font-bold text-[#ee2326] uppercase tracking-wider">
+                  Kosmo Dealership Punjab
                 </span>
               </div>
             </Link>

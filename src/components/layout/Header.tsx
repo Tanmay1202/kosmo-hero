@@ -53,11 +53,11 @@ export const Header: React.FC = () => {
               />
               <div className="h-8 w-px bg-gray-200 hidden sm:block"></div>
               <div className="flex flex-col justify-center">
-                <span className="text-sm sm:text-base font-black tracking-wider text-[#181818] uppercase font-display leading-tight">
-                  Hero MotoCorp
+                <span className="text-xs sm:text-base font-black tracking-wider text-[#181818] uppercase font-display leading-tight">
+                  Kosmo Vehicles Hero
                 </span>
-                <span className="text-[10px] sm:text-[11px] font-bold text-[#ee2326] uppercase tracking-wider">
-                  Kosmo Dealership Punjab
+                <span className="text-[9px] sm:text-[11px] font-bold text-[#ee2326] uppercase tracking-wider">
+                  Authorised Two Wheelers Dealership
                 </span>
               </div>
             </Link>

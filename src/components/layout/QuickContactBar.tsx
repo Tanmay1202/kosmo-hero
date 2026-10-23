@@ -27,14 +27,14 @@ export const QuickContactBar: React.FC = () => {
           <div className="flex items-center space-x-5 text-gray-300">
             <Link to="/dealer-locator" className="flex items-center gap-1 hover:text-white transition-colors">
               <MapPin className="w-3.5 h-3.5 text-[#ee2326]" />
-              <span>4 Branches in Punjab</span>
+              <span>5 Jalandhar Locations</span>
             </Link>
 
             <span className="text-neutral-700">|</span>
 
-            <a href="tel:+917045169141" className="flex items-center gap-1 text-white font-medium hover:text-[#ee2326] transition-colors">
+            <a href="tel:+919289922739" className="flex items-center gap-1 text-white font-medium hover:text-[#ee2326] transition-colors">
               <Phone className="w-3.5 h-3.5 text-[#ee2326]" />
-              <span>Jalandhar Desk: +91 70451-69141</span>
+              <span>Jalandhar Desk: +91 92899-22739</span>
             </a>
 
             <span className="text-neutral-700">|</span>

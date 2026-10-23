@@ -28,8 +28,10 @@ export const PartsAccessoriesPage: React.FC = () => {
   };
 
   const getWhatsAppPartsUrl = () => {
-    const text = `Hello Kosmo Hero Spare Parts Desk,\nI would like to enquire about Genuine Parts / Accessories.\n\n*Customer:* ${customerName}\n*Phone:* ${phone}\n*Vehicle:* ${modelName}\n*Parts Requested:* ${partQuery}`;
-    return `https://wa.me/917045169141?text=${encodeURIComponent(text)}`;
+    const branchObj = BRANCHES.find((b) => b.id === branch) || BRANCHES[0];
+    const branchPhone = branchObj.phoneNumbers[0].replace(/[^0-9]/g, '');
+    const text = `Hello Kosmo Hero Spare Parts Desk,\nI would like to enquire about Genuine Parts / Accessories.\n\n*Customer:* ${customerName}\n*Phone:* ${phone}\n*Vehicle:* ${modelName}\n*Preferred Store:* ${branchObj.name}\n*Parts Requested:* ${partQuery}`;
+    return `https://wa.me/${branchPhone}?text=${encodeURIComponent(text)}`;
   };
 
   return (
@@ -75,7 +77,7 @@ export const PartsAccessoriesPage: React.FC = () => {
             <Wrench className="w-8 h-8 text-[#ee2326] mb-3" />
             <h4 className="font-black uppercase text-sm text-gray-900 mb-1">Instant Availability</h4>
             <p className="text-xs text-gray-600 leading-relaxed">
-              Over 10,000 line items stocked across Jalandhar, Ludhiana, Dasuya, and Hoshiarpur spare parts stores.
+              Over 10,000 line items stocked across our 3 Jalandhar spare parts stores.
             </p>
           </div>
         </div>

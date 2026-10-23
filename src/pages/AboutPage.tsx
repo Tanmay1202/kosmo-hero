@@ -62,7 +62,7 @@ export const AboutPage: React.FC = () => {
             <div className="w-16 h-1 bg-[#ee2326]"></div>
 
             <blockquote className="text-sm sm:text-base text-gray-700 leading-relaxed font-light italic bg-gray-50 p-6 rounded-sm border-l-4 border-[#ee2326]">
-              &quot;At Kosmo Hero, our mission is to provide an unparalleled two-wheeler automotive experience. We believe that buying a vehicle is more than just a transaction; it&apos;s the beginning of a lifelong relationship. Our state-of-the-art flagship dealership in Jalandhar and our branches across Ludhiana, Dasuya, and Hoshiarpur are designed to offer you comfort, transparency, and a premium environment as you explore the safest, most efficient, and most technologically advanced motorcycles and scooters in India.&quot;
+              &quot;At Kosmo Hero, our mission is to provide an unparalleled two-wheeler automotive experience. We believe that buying a vehicle is more than just a transaction; it&apos;s the beginning of a lifelong relationship. Across our flagship dealership at Lamba Pind Chowk, Model House, Opp. Bus Stand, Kishangarh Highway, and our upcoming showroom at Urban Estate Phase-1, we are committed to offering you comfort, transparency, and a premium environment as you explore the safest, most efficient, and most technologically advanced motorcycles and scooters in India.&quot;
             </blockquote>
 
             <p className="text-xs font-bold text-gray-800 uppercase tracking-wider">
@@ -115,7 +115,7 @@ export const AboutPage: React.FC = () => {
                 The Kosmo Dealership Legacy
               </h2>
               <p className="text-xs sm:text-sm text-gray-600 leading-relaxed mb-4">
-                The Kosmo Dealership Group represents automotive leadership in Punjab. Operating flagship sales, workshop service, and genuine spare parts facilities across Jalandhar, Ludhiana, Dasuya, and Hoshiarpur, Kosmo is known for certified technicians, fast loan processing, and high Customer Satisfaction Index (CSI) scores.
+                The Kosmo Dealership Group represents automotive leadership in Punjab. Operating flagship sales, certified workshop service, and genuine spare parts facilities across Jalandhar at Lamba Pind Chowk, Model House, Opp. Bus Stand, Kishangarh Highway, and soon at Urban Estate Phase-1, Kosmo is known for certified technicians, fast loan processing, and high Customer Satisfaction Index (CSI) scores.
               </p>
               <div className="space-y-2 text-xs text-gray-700">
                 <div className="flex items-center gap-2">

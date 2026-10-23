@@ -32,7 +32,7 @@ export const FinanceCalculator: React.FC<FinanceCalculatorProps> = ({
 
   const getWhatsAppLoanUrl = () => {
     const text = `Hello Kosmo Hero Finance Desk,\nI would like to apply for retail finance via Hero FinCorp for *${modelName}*.\n\n*Vehicle Price:* ₹${vehiclePrice.toLocaleString('en-IN')}\n*Down Payment:* ₹${downPayment.toLocaleString('en-IN')}\n*Tenure:* ${tenureMonths} Months\n*Estimated EMI:* ₹${monthlyEmi.toLocaleString('en-IN')}/month\n\nPlease let me know the documentation needed for spot approval.`;
-    return `https://wa.me/917045169141?text=${encodeURIComponent(text)}`;
+    return `https://wa.me/919289922739?text=${encodeURIComponent(text)}`;
   };
 
   return (
@@ -178,7 +178,7 @@ export const FinanceCalculator: React.FC<FinanceCalculatorProps> = ({
               <span>Apply Spot Approval via WhatsApp</span>
             </a>
             <span className="block text-[10px] text-gray-500 text-center mt-2">
-              15-minute spot sanction across Jalandhar, Ludhiana, Dasuya & Hoshiarpur.
+              15-minute spot sanction across our Jalandhar dealership branches.
             </span>
           </div>
         </div>

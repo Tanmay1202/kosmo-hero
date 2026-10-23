@@ -43,7 +43,7 @@ export const MDQuoteSection: React.FC = () => {
             </h2>
 
             <blockquote className="text-sm sm:text-base text-gray-300 leading-relaxed font-light italic border-l-2 border-[#ee2326] pl-4 sm:pl-6 my-4">
-              &quot;At Kosmo Hero, our mission is to provide an unparalleled two-wheeler automotive experience. We believe that buying a motorcycle or scooter is more than just a transaction; it&apos;s the beginning of a lifelong relationship. Our state-of-the-art flagship dealership in Jalandhar and our expanded sales & service networks across Ludhiana, Dasuya, and Hoshiarpur are designed to offer you comfort, absolute transparency, and a premium environment as you explore the most reliable and advanced vehicles in India.&quot;
+              &quot;At Kosmo Hero, our mission is to provide an unparalleled two-wheeler automotive experience. We believe that buying a motorcycle or scooter is more than just a transaction; it&apos;s the beginning of a lifelong relationship. Across our flagship dealership at Lamba Pind Chowk, Model House, Opp. Bus Stand, Kishangarh Highway, and our upcoming showroom at Urban Estate Phase-1, we are dedicated to offering comfort, absolute transparency, and a premium environment.&quot;
             </blockquote>
 
             <div className="pt-2 flex items-center gap-4">

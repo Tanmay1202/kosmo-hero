@@ -1,7 +1,7 @@
 # AGENTS.md — Hero MotoCorp Multi-Branch Dealership Website Guidelines
 
 ## Core Principles & Boundaries
-1. **Primary Purpose**: This application is a production-grade, multi-branch dealership website representing Kosmo Hero MotoCorp across Punjab (Jalandhar, Ludhiana, Dasuya, and Hoshiarpur).
+1. **Primary Purpose**: This application is a production-grade, multi-branch dealership website representing Kosmo Hero MotoCorp across Jalandhar, Punjab (Head Branch: G.T. Road Near Lamba Pind Chowk; Branch 2: Model House / Basti Sheikh; Branch 3: G.T. Road Opp. Bus Stand Jawahar Nagar; Branch 4: Kishangarh Highway; Upcoming Dealership: Opp. Gurudwara Singh Sabha, Urban Estate Phase-1).
 2. **Strict Brand Separation**:
    - Vehicle content, model names, specifications, engineering features (i3S, xSens, XTEC, Sprint-EBT), warranty (5 years / 70,000 km for motorcycles, 50,000 km for scooters), and genuine parts/accessories MUST come strictly from **Hero MotoCorp India**.
    - NEVER introduce Tata Motors vehicle names (Nexon, Safari, Harrier, Punch, Tiago, Altroz, Curvv, Aeris, Sierra), passenger car terminology, or Tata imagery into this project.

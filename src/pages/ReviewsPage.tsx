@@ -20,7 +20,7 @@ export const ReviewsPage: React.FC = () => {
               Customer Reviews &amp; Testimonials
             </h1>
             <p className="text-sm sm:text-base text-gray-300 mt-3 leading-relaxed font-light">
-              Discover what riders across Jalandhar, Ludhiana, Dasuya, and Hoshiarpur have to say about purchasing and servicing their Hero motorcycles and scooters with the Kosmo Dealership Group.
+              Discover what riders across Jalandhar have to say about purchasing and servicing their Hero motorcycles and scooters with Kosmo Hero across our 3 branches.
             </p>
           </div>
         </div>

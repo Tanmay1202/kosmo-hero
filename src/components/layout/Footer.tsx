@@ -23,8 +23,8 @@ export const Footer: React.FC = () => {
               <MapPin className="w-6 h-6" />
             </div>
             <div>
-              <h4 className="font-bold uppercase tracking-wider text-sm text-white">4 Flagship Punjab Branches</h4>
-              <p className="text-xs text-gray-400 mt-1">Jalandhar, Ludhiana, Dasuya, and Hoshiarpur.</p>
+              <h4 className="font-bold uppercase tracking-wider text-sm text-white">5 Dealership Locations</h4>
+              <p className="text-xs text-gray-400 mt-1">Lamba Pind, Model House, Bus Stand, Kishangarh &amp; Urban Estate.</p>
             </div>
           </div>
 
@@ -56,15 +56,15 @@ export const Footer: React.FC = () => {
             <Link to="/" className="flex items-center gap-3 mb-5 group">
               <img
                 src="/assets/hero-logo.jpeg"
-                alt="Kosmo Hero MotoCorp"
+                alt="Kosmo Vehicles Hero"
                 className="h-12 w-12 rounded-full object-cover shadow-md ring-2 ring-white/10 shrink-0 group-hover:scale-105 transition-transform"
               />
               <div className="flex flex-col">
-                <span className="text-sm font-black uppercase tracking-wider text-white font-display">
-                  Hero MotoCorp
+                <span className="text-sm font-black uppercase tracking-wider text-white font-display leading-tight">
+                  Kosmo Vehicles Hero
                 </span>
                 <span className="text-[10px] font-bold text-[#ee2326] uppercase tracking-wider">
-                  Kosmo Dealership Punjab
+                  Authorised Two Wheelers Dealership
                 </span>
               </div>
             </Link>
@@ -78,7 +78,7 @@ export const Footer: React.FC = () => {
               </p>
               <p className="flex items-center gap-1.5">
                 <Phone className="w-3.5 h-3.5 text-[#ee2326]" />
-                <a href="tel:+917045169141" className="hover:text-white">+91 70451-69141</a>
+                <a href="tel:+919289922739" className="hover:text-white">+91 92899-22739</a>
               </p>
             </div>
           </div>

@@ -13,7 +13,7 @@ export const JobApplyModal: React.FC<JobApplyModalProps> = ({ job, isOpen, onClo
   const [fullName, setFullName] = useState('');
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
-  const [city, setCity] = useState('Jalandhar');
+  const [city, setCity] = useState('Jalandhar - Lamba Pind Chowk (Head Branch)');
   const [experience, setExperience] = useState('1-3 Years');
   const [message, setMessage] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -29,7 +29,7 @@ export const JobApplyModal: React.FC<JobApplyModalProps> = ({ job, isOpen, onClo
 
   const getWhatsAppHrUrl = () => {
     const text = `Hello Kosmo Hero HR Desk,\nI am applying for the position of *${jobTitle}*.\n\n*Name:* ${fullName}\n*Phone:* ${phone}\n*Email:* ${email}\n*City:* ${city}\n*Experience:* ${experience}\n*Notes:* ${message || 'Enclosed is my expression of interest.'}`;
-    return `https://wa.me/917045169141?text=${encodeURIComponent(text)}`;
+    return `https://wa.me/919289922739?text=${encodeURIComponent(text)}`;
   };
 
   const getMailtoUrl = () => {
@@ -149,10 +149,11 @@ export const JobApplyModal: React.FC<JobApplyModalProps> = ({ job, isOpen, onClo
                     onChange={(e) => setCity(e.target.value)}
                     className="w-full px-3 py-2 text-xs border border-gray-300 rounded-sm focus:border-[#ee2326] outline-none bg-white"
                   >
-                    <option value="Jalandhar">Jalandhar</option>
-                    <option value="Ludhiana">Ludhiana</option>
-                    <option value="Dasuya">Dasuya</option>
-                    <option value="Hoshiarpur">Hoshiarpur</option>
+                    <option value="Jalandhar - Lamba Pind Chowk (Head Branch)">Jalandhar - Lamba Pind Chowk (Head Branch)</option>
+                    <option value="Jalandhar - Model House (Basti Sheikh)">Jalandhar - Model House (Basti Sheikh)</option>
+                    <option value="Jalandhar - Opp. Bus Stand (Jawahar Nagar)">Jalandhar - Opp. Bus Stand (Jawahar Nagar)</option>
+                    <option value="Jalandhar - Kishangarh (Highway Branch)">Jalandhar - Kishangarh (Highway Branch)</option>
+                    <option value="Jalandhar - Urban Estate Phase-1 (Upcoming)">Jalandhar - Urban Estate Phase-1 (Upcoming)</option>
                   </select>
                 </div>
 

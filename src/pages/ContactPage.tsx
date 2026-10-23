@@ -40,13 +40,13 @@ export const ContactPage: React.FC = () => {
                 Headquarters &amp; Flagship
               </span>
               <h3 className="text-2xl font-black uppercase tracking-tight text-white mt-1">
-                Kosmo Hero Jalandhar
+                Kosmo Hero Head Branch
               </h3>
               
               <div className="space-y-3 mt-6 text-xs text-gray-300">
                 <div className="flex items-start gap-2.5">
                   <MapPin className="w-4 h-4 text-[#ee2326] shrink-0 mt-0.5" />
-                  <span>Kosmo Hero Motors, G.T. Road, Jalandhar, Punjab - 144001, India</span>
+                  <span>G.T Road, Near Lamba Pind Chowk, Jalandhar, Punjab - 144001</span>
                 </div>
 
                 <div className="flex items-center gap-2.5">
@@ -58,8 +58,8 @@ export const ContactPage: React.FC = () => {
 
                 <div className="flex items-center gap-2.5">
                   <Phone className="w-4 h-4 text-[#ee2326] shrink-0" />
-                  <a href="tel:+917045169141" className="font-bold text-white hover:text-[#ee2326]">
-                    +91 70451-69141 / +91 75060-21479
+                  <a href="tel:+919289922739" className="font-bold text-white hover:text-[#ee2326]">
+                    +91 92899-22739
                   </a>
                 </div>
 
@@ -83,14 +83,20 @@ export const ContactPage: React.FC = () => {
             {/* Other Branches Quick List */}
             <div className="bg-gray-50 p-6 rounded-sm border border-gray-200">
               <h4 className="text-xs font-black uppercase tracking-wider text-gray-900 mb-3">
-                Other Branches in Punjab
+                Other Branches in Jalandhar
               </h4>
               <div className="space-y-3">
                 {BRANCHES.filter((b) => !b.isHeadBranch).map((b) => (
                   <div key={b.id} className="p-3 bg-white rounded border border-gray-200 text-xs">
                     <div className="font-bold text-gray-900 uppercase flex items-center justify-between">
                       <span>{b.name}</span>
-                      <span className="text-[10px] text-[#ee2326] font-bold">{b.city}</span>
+                      <span
+                        className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${
+                          b.isUpcoming ? 'text-amber-800 bg-amber-100' : 'text-[#ee2326] bg-red-50'
+                        }`}
+                      >
+                        {b.isUpcoming ? 'Opening Soon' : b.city}
+                      </span>
                     </div>
                     <div className="text-gray-500 text-[11px] truncate mt-1">{b.address}</div>
                     <div className="mt-2 flex items-center justify-between pt-2 border-t border-gray-100 text-[11px]">

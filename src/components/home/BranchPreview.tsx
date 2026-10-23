@@ -14,15 +14,15 @@ export const BranchPreview: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-10">
           <SectionHeading
-            badge="Punjab Dealership Network"
+            badge="Jalandhar Dealership Network"
             title="Visit Your Nearest"
             highlight="Kosmo Hero Branch"
-            subtitle="Explore our modern showrooms, test-ride tracks, and certified service bays across major hubs in Punjab."
+            subtitle="Explore our modern showrooms, test-ride tracks, and certified service bays across strategic locations in Jalandhar."
             className="mb-0 max-w-xl"
           />
 
           <Button to="/dealer-locator" variant="secondary" size="sm" className="mt-6 md:mt-0">
-            <span>View All 4 Branches</span>
+            <span>View All Branches ({BRANCHES.length})</span>
             <ArrowRight className="w-3.5 h-3.5 ml-1" />
           </Button>
         </div>
@@ -40,7 +40,12 @@ export const BranchPreview: React.FC = () => {
               }`}
             >
               <MapPin className="w-3.5 h-3.5" />
-              <span>{b.city} ({b.name.replace('Kosmo Hero ', '')})</span>
+              <span>{b.name.replace('Kosmo Hero - ', '')}</span>
+              {b.isUpcoming && (
+                <span className="text-[9px] px-1.5 py-0.2 bg-amber-200 text-amber-900 rounded font-bold">
+                  Upcoming
+                </span>
+              )}
             </button>
           ))}
         </div>

@@ -90,7 +90,7 @@ export const HomePage: React.FC = () => {
               Ready to Test Ride Your Favorite Hero?
             </h3>
             <p className="text-xs sm:text-sm text-white/90 mt-1 max-w-xl">
-              Visit any of our 4 flagship branches in Jalandhar, Ludhiana, Dasuya, and Hoshiarpur or schedule a doorstep test ride today.
+              Visit any of our authorized showrooms in Jalandhar (Lamba Pind Chowk, Model House, Opp. Bus Stand, Kishangarh) or schedule a test ride today.
             </p>
           </div>
           <div className="flex flex-wrap gap-3 justify-center">

@@ -25,8 +25,10 @@ export const ExchangePage: React.FC = () => {
   };
 
   const getWhatsAppExchangeUrl = () => {
-    const text = `Hello Kosmo Hero Sure Desk,\nI would like to trade in my old two-wheeler.\n\n*Customer:* ${ownerName}\n*Phone:* ${phone}\n*Current Vehicle:* ${currentMake} ${currentModel} (${manufacturingYear})\n*New Hero Model of Interest:* ${targetVehicle}\n*Preferred Branch:* ${BRANCHES.find(b => b.id === branch)?.name}\n\nPlease schedule my free physical inspection and quote my exchange bonus.`;
-    return `https://wa.me/917045169141?text=${encodeURIComponent(text)}`;
+    const branchObj = BRANCHES.find((b) => b.id === branch) || BRANCHES[0];
+    const branchPhone = branchObj.phoneNumbers[0].replace(/[^0-9]/g, '');
+    const text = `Hello Kosmo Hero Sure Desk,\nI would like to trade in my old two-wheeler.\n\n*Customer:* ${ownerName}\n*Phone:* ${phone}\n*Current Vehicle:* ${currentMake} ${currentModel} (${manufacturingYear})\n*New Hero Model of Interest:* ${targetVehicle}\n*Preferred Branch:* ${branchObj.name}\n\nPlease schedule my free physical inspection and quote my exchange bonus.`;
+    return `https://wa.me/${branchPhone}?text=${encodeURIComponent(text)}`;
   };
 
   return (

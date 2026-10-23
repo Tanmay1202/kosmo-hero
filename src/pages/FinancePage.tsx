@@ -79,7 +79,7 @@ export const FinancePage: React.FC = () => {
           <SectionHeading
             badge="Checklist"
             title="Documents Required For Spot Loan Approval"
-            subtitle="Carry these essential documents to our Jalandhar, Ludhiana, Dasuya, or Hoshiarpur branches for fast-track processing."
+            subtitle="Carry these essential documents to any of our Jalandhar dealership branches for fast-track processing."
             light
           />
 
@@ -98,11 +98,11 @@ export const FinancePage: React.FC = () => {
               Need loan assistance? Speak directly to our senior finance advisor.
             </span>
             <a
-              href="tel:+917045169141"
+              href="tel:+919289922739"
               className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#ee2326] text-white font-bold text-xs uppercase rounded-sm hover:bg-[#d30000]"
             >
               <Phone className="w-3.5 h-3.5" />
-              <span>Call Finance Desk: +91 70451-69141</span>
+              <span>Call Finance Desk: +91 92899-22739</span>
             </a>
           </div>
         </div>

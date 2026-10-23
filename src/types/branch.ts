@@ -15,4 +15,5 @@ export interface Branch {
   facilities: string[];
   mapQuery: string;
   isHeadBranch?: boolean;
+  isUpcoming?: boolean;
 }

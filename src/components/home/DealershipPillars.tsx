@@ -11,8 +11,8 @@ export const DealershipPillars: React.FC = () => {
     },
     {
       icon: ShieldCheck,
-      title: '4 Modern 3S Showrooms & Workshops',
-      description: 'Full sales, service, and spare parts infrastructure across Jalandhar, Ludhiana, Dasuya, and Hoshiarpur.',
+      title: 'Authorized Showrooms & Modern Workshops',
+      description: 'Full sales, service, and genuine parts infrastructure across Jalandhar: Lamba Pind Chowk, Model House, Opp. Bus Stand, Kishangarh Highway, and upcoming Urban Estate Phase-1.',
     },
     {
       icon: Wrench,
@@ -63,8 +63,8 @@ export const DealershipPillars: React.FC = () => {
             <div className="text-xs font-bold uppercase tracking-wider text-gray-400 mt-1">Happy Two-Wheeler Riders</div>
           </div>
           <div>
-            <div className="text-3xl sm:text-4xl font-black text-white">4</div>
-            <div className="text-xs font-bold uppercase tracking-wider text-gray-400 mt-1">Punjab Dealership Branches</div>
+            <div className="text-3xl sm:text-4xl font-black text-white">5</div>
+            <div className="text-xs font-bold uppercase tracking-wider text-gray-400 mt-1">Dealership Locations Jalandhar</div>
           </div>
           <div>
             <div className="text-3xl sm:text-4xl font-black text-[#ee2326]">90 Min</div>

@@ -11,7 +11,7 @@ export const OFFERS: Offer[] = [
     validity: 'Valid through this festive season (30th November)',
     terms: [
       'Applicable on exchange of any two-wheeler brand/model.',
-      'Physical inspection required at Kosmo Hero Jalandhar, Ludhiana, Dasuya, or Hoshiarpur.',
+      'Physical inspection required at any Kosmo Hero Jalandhar branch (Lamba Pind, Model House, or Opp. Bus Stand).',
       'Original RC, insurance, and valid Aadhaar of the owner required.',
     ],
     badge: 'Popular Exchange',

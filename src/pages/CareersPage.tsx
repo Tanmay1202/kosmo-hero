@@ -73,8 +73,8 @@ export const CareersPage: React.FC = () => {
         <div className="mb-16">
           <SectionHeading
             badge="Current Openings"
-            title="Explore Opportunities Across Punjab"
-            subtitle="Positions available across our Jalandhar, Ludhiana, Dasuya, and Hoshiarpur branches."
+            title="Explore Opportunities in Jalandhar"
+            subtitle="Positions available across our Jalandhar dealership network (Lamba Pind Chowk, Model House, Opp. Bus Stand, and Kishangarh Highway)."
           />
 
           <div className="space-y-6">

@@ -64,7 +64,7 @@ export const PrivacyPolicyPage: React.FC = () => {
           <p>
             If you have questions regarding your data or wish to update your records, please contact us at:
             <br />
-            <strong>Email:</strong> customercare@kosmohero.in | <strong>Phone:</strong> +91 70451-69141
+            <strong>Email:</strong> customercare@kosmohero.in | <strong>Phone:</strong> +91 92899-22739
             <br />
             <strong>Address:</strong> Kosmo Hero Motors, G.T. Road, Jalandhar, Punjab - 144001, India.
           </p>

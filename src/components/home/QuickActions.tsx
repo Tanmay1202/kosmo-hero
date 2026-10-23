@@ -14,10 +14,10 @@ export const QuickActions: React.FC = () => {
     },
     {
       title: 'Find Nearest Branch',
-      subtitle: 'Showrooms & workshops in Jalandhar, Ludhiana, Dasuya, Hoshiarpur',
+      subtitle: 'Showrooms & workshops across Jalandhar & Highway',
       icon: MapPin,
       to: '/dealer-locator',
-      badge: '4 Locations',
+      badge: '5 Locations',
       color: 'bg-[#181818]',
     },
     {

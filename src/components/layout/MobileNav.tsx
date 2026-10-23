@@ -24,10 +24,13 @@ export const MobileNav: React.FC<MobileNavProps> = ({ isOpen, onClose }) => {
             <div className="flex items-center gap-2.5">
               <img
                 src="/assets/hero-logo.jpeg"
-                alt="Kosmo Hero"
-                className="w-8 h-8 rounded-full object-cover ring-1 ring-white/20 shrink-0"
+                alt="Kosmo Vehicles Hero"
+                className="w-9 h-9 rounded-full object-cover ring-1 ring-white/20 shrink-0"
               />
-              <span className="font-black uppercase tracking-wider text-sm">Kosmo Hero Menu</span>
+              <div className="flex flex-col">
+                <span className="font-black uppercase tracking-wider text-xs leading-tight">Kosmo Vehicles Hero</span>
+                <span className="text-[9px] uppercase tracking-wider text-[#ee2326] font-bold">Authorised Dealership</span>
+              </div>
             </div>
             <button
               onClick={onClose}
@@ -161,7 +164,7 @@ export const MobileNav: React.FC<MobileNavProps> = ({ isOpen, onClose }) => {
           <div className="flex items-center gap-2 text-gray-300">
             <Phone className="w-4 h-4 text-[#ee2326]" />
             <span>Jalandhar:</span>
-            <a href="tel:+917045169141" className="text-white font-bold">+91 70451-69141</a>
+            <a href="tel:+919289922739" className="text-white font-bold">+91 92899-22739</a>
           </div>
         </div>
       </div>

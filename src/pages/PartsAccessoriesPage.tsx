@@ -162,7 +162,7 @@ export const PartsAccessoriesPage: React.FC = () => {
                     required
                     value={modelName}
                     onChange={(e) => setModelName(e.target.value)}
-                    placeholder="e.g. Karizma XMR (2024)"
+                    placeholder="e.g. Splendor+ XTEC (2024)"
                     className="w-full px-3 py-2 text-xs border border-gray-300 rounded-sm focus:border-[#ee2326] outline-none bg-white"
                   />
                 </div>

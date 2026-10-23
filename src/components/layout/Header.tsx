@@ -63,7 +63,7 @@ export const Header: React.FC = () => {
             </Link>
 
             {/* Desktop Navigation Links */}
-            <nav className="hidden lg:flex items-center space-x-7">
+            <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8 ml-8 mr-6 xl:ml-12 xl:mr-10">
               <Link to="/" className={navLinkStyle('/')}>
                 Home
               </Link>
@@ -89,7 +89,7 @@ export const Header: React.FC = () => {
                       to="/motorcycles"
                       className="flex items-center justify-between px-4 py-2.5 text-xs font-bold uppercase tracking-wider text-slate-800 hover:bg-gray-50 hover:text-[#ee2326] transition-colors"
                     >
-                      <span>Motorcycles (18 Models)</span>
+                      <span>Motorcycles (17 Models)</span>
                       <span className="text-[10px] bg-red-100 text-[#ee2326] px-1.5 py-0.5 rounded">All CC</span>
                     </Link>
                     <Link

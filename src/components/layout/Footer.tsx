@@ -96,7 +96,7 @@ export const Footer: React.FC = () => {
               <li><Link to="/motorcycles/xtreme-125r" className="hover:text-white transition-colors">Xtreme 125R</Link></li>
               <li><Link to="/motorcycles/xtreme-160r-4v" className="hover:text-white transition-colors">Xtreme 160R 4V</Link></li>
               <li><Link to="/motorcycles/xpulse-200-4v" className="hover:text-white transition-colors">XPulse 200 4V</Link></li>
-              <li><Link to="/motorcycles/karizma-xmr" className="hover:text-white transition-colors">Karizma XMR</Link></li>
+              <li><Link to="/motorcycles/xpulse-210" className="hover:text-white transition-colors">XPulse 210</Link></li>
               <li><Link to="/motorcycles/hf-deluxe" className="hover:text-white transition-colors">HF Deluxe</Link></li>
             </ul>
           </div>

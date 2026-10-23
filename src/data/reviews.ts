@@ -40,10 +40,10 @@ export const REVIEWS: Review[] = [
   {
     id: 'rev-5',
     author: 'Rajinder Kumar',
-    purchasedModel: 'Hero Karizma XMR',
+    purchasedModel: 'Hero Xtreme 160R 4V',
     rating: 5,
     date: 'June 2026',
-    comment: 'Upgraded from my older 150cc to the Karizma XMR in Iconic Yellow. The high-RPM acceleration is addictive. Kosmo Hero Jalandhar team delivered it with the full Joyride package. Highly recommend this dealership group!',
+    comment: 'Upgraded to the Xtreme 160R 4V with upside-down forks. The throttle response and stability on highways around Jalandhar are exceptional. Kosmo Hero team delivered it with the full Joyride package. Highly recommend this dealership group!',
     location: 'Jalandhar (Model House)',
   },
 ];

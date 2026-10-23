@@ -7,7 +7,7 @@ import { Sparkles, RotateCw, Eye, ArrowRight, PhoneCall, Gauge, Zap, Fuel, Shiel
 
 export const DigitalShowroomPage: React.FC = () => {
   const showcaseModels = [
-    MOTORCYCLES.find((m) => m.slug === 'karizma-xmr')!,
+    MOTORCYCLES.find((m) => m.slug === 'xtreme-250r') || MOTORCYCLES[0],
     MOTORCYCLES.find((m) => m.slug === 'xpulse-200-4v')!,
     MOTORCYCLES.find((m) => m.slug === 'xtreme-125r')!,
     MOTORCYCLES.find((m) => m.slug === 'splendor-plus-xtec-2-0')!,

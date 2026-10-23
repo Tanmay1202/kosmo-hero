@@ -40,7 +40,7 @@ export const MotorcyclesPage: React.FC = () => {
           <Breadcrumbs items={[{ label: 'Motorcycles' }]} className="text-gray-400 mb-4" />
           <div className="max-w-3xl">
             <span className="text-xs font-bold uppercase tracking-widest text-[#ee2326]">
-              Complete Motorcycle Lineup • 18 Models
+              Complete Motorcycle Lineup • 17 Models
             </span>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-tight text-white mt-1">
               Hero Motorcycles

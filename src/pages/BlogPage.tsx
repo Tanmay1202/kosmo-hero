@@ -31,7 +31,7 @@ export const BlogPage: React.FC = () => {
       readTime: '3 min read',
       date: 'August 2026',
       summary: 'Counterfeit oils cause thermal degradation and premature piston wear. Discover how Hero OEM synthetic blends keep your engine running cooler and cleaner.',
-      image: 'https://s7ap1.scene7.com/is/image/hmcl/Karizma_xmr?fmt=webp-alpha',
+      image: 'https://s7ap1.scene7.com/is/image/hmcl/splendorplus_xtec_2.0?fmt=webp-alpha',
     },
     {
       id: 'be-a-safe-hero-road-guidelines',

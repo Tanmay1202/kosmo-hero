@@ -227,29 +227,17 @@ export const VehicleDetailPage: React.FC = () => {
 
             {/* Quick CTAs */}
             <div className="pt-2 flex flex-col sm:flex-row gap-3">
-              {vehicle.slug !== 'karizma-xmr' ? (
-                <Button
-                  variant="primary"
-                  size="lg"
-                  className="w-full"
-                  onClick={() => {
-                    document.getElementById('test-ride-section')?.scrollIntoView({ behavior: 'smooth' });
-                  }}
-                >
-                  <PhoneCall className="w-4 h-4 mr-1" />
-                  <span>Book Test Ride Online</span>
-                </Button>
-              ) : (
-                <Button
-                  to="/contact-us"
-                  variant="primary"
-                  size="lg"
-                  className="w-full"
-                >
-                  <PhoneCall className="w-4 h-4 mr-1" />
-                  <span>Enquire Availability</span>
-                </Button>
-              )}
+              <Button
+                variant="primary"
+                size="lg"
+                className="w-full"
+                onClick={() => {
+                  document.getElementById('test-ride-section')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
+                <PhoneCall className="w-4 h-4 mr-1" />
+                <span>Book Test Ride Online</span>
+              </Button>
               <Button
                 to="/dealer-locator"
                 variant="secondary"
@@ -417,11 +405,9 @@ export const VehicleDetailPage: React.FC = () => {
       </section>
 
       {/* Embedded Test Ride Booking Form */}
-      {vehicle.slug !== 'karizma-xmr' && (
-        <section id="test-ride-section" className="py-16 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <TestRideForm initialModelSlug={vehicle.slug} />
-        </section>
-      )}
+      <section id="test-ride-section" className="py-16 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <TestRideForm initialModelSlug={vehicle.slug} />
+      </section>
 
       {/* Similar Models Carousel */}
       {similarModels.length > 0 && (

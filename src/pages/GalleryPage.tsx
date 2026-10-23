@@ -11,7 +11,7 @@ export const GalleryPage: React.FC = () => {
 
   const galleryItems = [
     { title: 'Hero XPulse 200 4V Off-Road Trail', category: 'adventure', tag: 'Adventure Rally', image: 'https://s7ap1.scene7.com/is/image/hmcl/xpulse-200-4v?fmt=webp-alpha' },
-    { title: 'Karizma XMR Track Edition', category: 'motorcycles', tag: 'Super Sport', image: 'https://s7ap1.scene7.com/is/image/hmcl/Karizma_xmr?fmt=webp-alpha' },
+    { title: 'Xtreme 250R Quarter-Liter Beast', category: 'motorcycles', tag: 'Performance Sport', image: 'https://s7ap1.scene7.com/is/image/hmcl/xtreme-new-05?fmt=webp-alpha' },
     { title: 'Xtreme 160R 4V Street Stance', category: 'motorcycles', tag: 'Streetfighter', image: 'https://s7ap1.scene7.com/is/image/hmcl/xtreme160r-image-06?fmt=webp-alpha' },
     { title: 'New Destini 125 Front ABS Profile', category: 'scooters', tag: 'Neo-Retro', image: 'https://s7ap1.scene7.com/is/image/hmcl/destini-prime?fmt=webp-alpha' },
     { title: 'Xoom 110 Cornering Light Showcase', category: 'scooters', tag: 'Urban Sport', image: 'https://s7ap1.scene7.com/is/image/hmcl/xoom-110?fmt=webp-alpha' },

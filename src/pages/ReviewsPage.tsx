@@ -31,7 +31,7 @@ export const ReviewsPage: React.FC = () => {
         <div className="p-8 bg-gray-50 rounded-sm border border-gray-200 mb-12 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-6">
             <div className="text-center sm:text-left">
-              <div className="text-5xl font-black text-gray-900">4.8</div>
+              <div className="text-5xl font-black text-gray-900">4.9</div>
               <div className="flex items-center gap-1 text-amber-400 mt-1 justify-center sm:justify-start">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-4 h-4 fill-amber-400" />

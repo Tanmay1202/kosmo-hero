@@ -71,7 +71,7 @@ export const DealershipPillars: React.FC = () => {
             <div className="text-xs font-bold uppercase tracking-wider text-gray-400 mt-1">Express Service Delivery</div>
           </div>
           <div>
-            <div className="text-3xl sm:text-4xl font-black text-white">4.8 / 5</div>
+            <div className="text-3xl sm:text-4xl font-black text-white">4.9 / 5</div>
             <div className="text-xs font-bold uppercase tracking-wider text-gray-400 mt-1">Google Customer Rating</div>
           </div>
         </div>

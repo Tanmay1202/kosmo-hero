@@ -100,10 +100,17 @@ export const VehicleCard: React.FC<VehicleCardProps> = ({ vehicle }) => {
               <span>Explore</span>
               <ChevronRight className="w-3 h-3 ml-0.5" />
             </Button>
-            <Button to={testRideUrl} variant="primary" size="sm" className="w-full text-xs">
-              <PhoneCall className="w-3 h-3 mr-0.5" />
-              <span>Test Ride</span>
-            </Button>
+            {vehicle.slug !== 'karizma-xmr' ? (
+              <Button to={testRideUrl} variant="primary" size="sm" className="w-full text-xs">
+                <PhoneCall className="w-3 h-3 mr-0.5" />
+                <span>Test Ride</span>
+              </Button>
+            ) : (
+              <Button to="/contact-us" variant="primary" size="sm" className="w-full text-xs">
+                <PhoneCall className="w-3 h-3 mr-0.5" />
+                <span>Enquire</span>
+              </Button>
+            )}
           </div>
         </div>
       </div>

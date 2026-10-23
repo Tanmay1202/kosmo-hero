@@ -36,8 +36,8 @@ export const BookServicePage: React.FC = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
             {BRANCHES.map((b) => (
               <div key={b.id} className="p-3 bg-white rounded border border-gray-200">
-                <div className="font-bold text-gray-900 uppercase truncate">{b.city} Service Desk</div>
-                <div className="text-gray-500 text-[11px] truncate mt-0.5">{b.generalManager.name} (GM)</div>
+                <div className="font-bold text-gray-900 uppercase truncate">{b.name.replace('Kosmo Hero - ', '')}</div>
+                <div className="text-gray-500 text-[11px] truncate mt-0.5">{b.address}</div>
                 <a
                   href={`tel:${b.phoneNumbers[0].replace(/[^0-9+]/g, '')}`}
                   className="font-bold text-[#ee2326] hover:underline mt-2 inline-block font-mono"

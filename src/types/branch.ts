@@ -8,10 +8,6 @@ export interface Branch {
   phoneNumbers: string[];
   email: string;
   hours: string;
-  generalManager: {
-    name: string;
-    phone: string;
-  };
   facilities: string[];
   mapQuery: string;
   isHeadBranch?: boolean;

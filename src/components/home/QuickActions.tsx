@@ -68,7 +68,7 @@ export const QuickActions: React.FC = () => {
               </div>
 
               <div className="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between text-xs font-bold uppercase tracking-wider text-[#ee2326]">
-                <span>Get Started</span>
+                <span>Click Here</span>
                 <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </div>
             </Link>

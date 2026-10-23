@@ -1,9 +1,29 @@
 import React, { useState } from 'react';
-import { CheckCircle2, MessageSquare, Send, Calendar, MapPin, User, Phone, Bike, Sparkles } from 'lucide-react';
-import { MOTORCYCLES } from '../../data/motorcycles';
-import { SCOOTERS } from '../../data/scooters';
+import { CheckCircle2, MessageSquare, Send, Calendar, MapPin, User, Phone, Bike, Sparkles, Clock } from 'lucide-react';
 import { BRANCHES } from '../../data/branches';
 import { Button } from '../common/Button';
+
+export const TEST_RIDE_MOTORCYCLES = [
+  'Splendor',
+  'HF Deluxe',
+  'Passion+',
+  'Glamour',
+  'Xtreme',
+  'XPulse',
+];
+
+export const TEST_RIDE_SCOOTERS = [
+  'Destini',
+  'Pleasure+',
+  'Xoom',
+];
+
+export const TEST_RIDE_TIME_SLOTS = [
+  '10:00 AM - 12:00 PM',
+  '12:00 PM - 02:00 PM',
+  '02:00 PM - 04:00 PM',
+  '04:00 PM - 06:30 PM',
+];
 
 interface TestRideFormProps {
   initialModelSlug?: string;
@@ -18,12 +38,28 @@ export const TestRideForm: React.FC<TestRideFormProps> = ({
   onSuccess,
   className = '',
 }) => {
-  const allVehicles = [...MOTORCYCLES, ...SCOOTERS];
-  const [selectedModel, setSelectedModel] = useState(initialModelSlug);
+  const resolveInitialVehicle = (slug: string): string => {
+    if (!slug) return '';
+    const s = slug.toLowerCase();
+    if (s.includes('karizma') || s.includes('harley')) return '';
+    if (s.includes('splendor')) return 'Splendor';
+    if (s.includes('hf')) return 'HF Deluxe';
+    if (s.includes('passion')) return 'Passion+';
+    if (s.includes('glamour')) return 'Glamour';
+    if (s.includes('xtreme')) return 'Xtreme';
+    if (s.includes('xpulse')) return 'XPulse';
+    if (s.includes('destini')) return 'Destini';
+    if (s.includes('pleasure')) return 'Pleasure+';
+    if (s.includes('xoom')) return 'Xoom';
+    return '';
+  };
+
+  const [selectedModel, setSelectedModel] = useState(() => resolveInitialVehicle(initialModelSlug));
   const [selectedBranch, setSelectedBranch] = useState(initialBranchId);
   const [fullName, setFullName] = useState('');
   const [phone, setPhone] = useState('');
   const [preferredDate, setPreferredDate] = useState('');
+  const [selectedTimeSlot, setSelectedTimeSlot] = useState(TEST_RIDE_TIME_SLOTS[0]);
   const [hasLicense, setHasLicense] = useState(true);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [bookingRef, setBookingRef] = useState('');
@@ -45,7 +81,7 @@ export const TestRideForm: React.FC<TestRideFormProps> = ({
     }
 
     if (!selectedModel) {
-      setErrorMessage('Please select a motorcycle or scooter model.');
+      setErrorMessage('Please select a bike or scooter.');
       return;
     }
 
@@ -62,17 +98,14 @@ export const TestRideForm: React.FC<TestRideFormProps> = ({
 
   const getWhatsAppUrl = () => {
     const branchObj = BRANCHES.find((b) => b.id === selectedBranch) || BRANCHES[0];
-    const vehicleObj = allVehicles.find((v) => v.slug === selectedModel);
-    const vehicleName = vehicleObj ? vehicleObj.name : selectedModel;
     const branchPhone = branchObj.phoneNumbers[0].replace(/[^0-9]/g, '');
 
-    const message = `Hello Kosmo Hero,\nI have scheduled a Test Ride booking.\n\n*Ref Code:* ${bookingRef}\n*Name:* ${fullName}\n*Phone:* ${phone}\n*Vehicle:* ${vehicleName}\n*Branch:* ${branchObj.name} (${branchObj.city})\n*Preferred Date:* ${preferredDate}\n*Valid License:* ${hasLicense ? 'Yes' : 'Pending'}\n\nPlease confirm my slot.`;
+    const message = `Hello Kosmo Hero,\nI have scheduled a Test Ride booking.\n\n*Ref Code:* ${bookingRef}\n*Name:* ${fullName}\n*Phone:* ${phone}\n*Vehicle:* ${selectedModel}\n*Branch:* ${branchObj.name}\n*Address:* ${branchObj.address}\n*Preferred Date:* ${preferredDate}\n*Time Slot:* ${selectedTimeSlot}\n*Valid License:* ${hasLicense ? 'Yes' : 'Pending'}\n\nPlease confirm my slot.`;
 
     return `https://wa.me/${branchPhone}?text=${encodeURIComponent(message)}`;
   };
 
   if (isSubmitted) {
-    const vehicleObj = allVehicles.find((v) => v.slug === selectedModel);
     const branchObj = BRANCHES.find((b) => b.id === selectedBranch) || BRANCHES[0];
 
     return (
@@ -93,20 +126,28 @@ export const TestRideForm: React.FC<TestRideFormProps> = ({
           </div>
           <div className="flex justify-between">
             <span className="text-gray-500 font-semibold uppercase">Vehicle:</span>
-            <span className="font-bold text-[#ee2326]">{vehicleObj?.name}</span>
+            <span className="font-bold text-[#ee2326]">{selectedModel}</span>
           </div>
           <div className="flex justify-between">
             <span className="text-gray-500 font-semibold uppercase">Dealership Branch:</span>
-            <span className="font-bold text-gray-900">{branchObj.name} ({branchObj.city})</span>
+            <span className="font-bold text-gray-900">{branchObj.name}</span>
+          </div>
+          <div className="flex justify-between">
+            <span className="text-gray-500 font-semibold uppercase">Branch Address:</span>
+            <span className="text-gray-700 text-right max-w-[220px] font-medium">{branchObj.address}</span>
           </div>
           <div className="flex justify-between">
             <span className="text-gray-500 font-semibold uppercase">Scheduled Date:</span>
             <span className="font-bold text-gray-900">{preferredDate}</span>
           </div>
+          <div className="flex justify-between">
+            <span className="text-gray-500 font-semibold uppercase">Time Slot:</span>
+            <span className="font-bold text-[#ee2326]">{selectedTimeSlot}</span>
+          </div>
         </div>
 
         <p className="text-xs text-gray-600 mb-6">
-          Our branch sales executive will have the vehicle sanitized, fueled, and ready for you.
+          Our branch sales executive will have the vehicle sanitized, fueled, and ready for your ride.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
@@ -128,6 +169,7 @@ export const TestRideForm: React.FC<TestRideFormProps> = ({
               setFullName('');
               setPhone('');
               setPreferredDate('');
+              setSelectedTimeSlot(TEST_RIDE_TIME_SLOTS[0]);
             }}
           >
             Book Another Ride
@@ -147,7 +189,7 @@ export const TestRideForm: React.FC<TestRideFormProps> = ({
           Experience Your Dream Hero Ride
         </h3>
         <p className="text-xs text-gray-500 mt-1">
-          Doorstep test ride or VIP showroom track experience at any of our Punjab dealerships.
+          Showroom test ride experience across our authorized Jalandhar dealership branches.
         </p>
       </div>
 
@@ -196,10 +238,10 @@ export const TestRideForm: React.FC<TestRideFormProps> = ({
           </div>
         </div>
 
-        {/* Model Selection */}
+        {/* Vehicle Selection - Simplified Names Only */}
         <div>
           <label className="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-1.5">
-            Select Hero Model *
+            Select Bike or Scooter *
           </label>
           <div className="relative">
             <Bike className="w-4 h-4 text-gray-400 absolute left-3 top-3" />
@@ -209,18 +251,18 @@ export const TestRideForm: React.FC<TestRideFormProps> = ({
               onChange={(e) => setSelectedModel(e.target.value)}
               className="w-full pl-9 pr-3 py-2.5 text-xs sm:text-sm border border-gray-300 rounded-sm focus:border-[#ee2326] focus:ring-1 focus:ring-[#ee2326] outline-none bg-white cursor-pointer"
             >
-              <option value="">-- Choose Motorcycle or Scooter --</option>
+              <option value="">-- Choose Bike or Scooter --</option>
               <optgroup label="Hero Motorcycles">
-                {MOTORCYCLES.map((m) => (
-                  <option key={m.slug} value={m.slug}>
-                    {m.name} ({m.displacementCc} cc) - From {m.startingPrice}
+                {TEST_RIDE_MOTORCYCLES.map((name) => (
+                  <option key={name} value={name}>
+                    {name}
                   </option>
                 ))}
               </optgroup>
               <optgroup label="Hero Scooters">
-                {SCOOTERS.map((s) => (
-                  <option key={s.slug} value={s.slug}>
-                    {s.name} ({s.displacementCc} cc) - From {s.startingPrice}
+                {TEST_RIDE_SCOOTERS.map((name) => (
+                  <option key={name} value={name}>
+                    {name}
                   </option>
                 ))}
               </optgroup>
@@ -228,10 +270,10 @@ export const TestRideForm: React.FC<TestRideFormProps> = ({
           </div>
         </div>
 
-        {/* Preferred Branch */}
+        {/* Preferred Dealership Branch */}
         <div>
           <label className="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-1.5">
-            Select Preferred Dealership Branch *
+            Select Dealership Branch *
           </label>
           <div className="relative">
             <MapPin className="w-4 h-4 text-gray-400 absolute left-3 top-3" />
@@ -242,28 +284,67 @@ export const TestRideForm: React.FC<TestRideFormProps> = ({
             >
               {BRANCHES.map((b) => (
                 <option key={b.id} value={b.id}>
-                  {b.name} ({b.city})
+                  {b.name.replace('Kosmo Hero - ', '')} {b.isUpcoming ? '(Opening Soon - Pre-Booking)' : ''}
                 </option>
               ))}
             </select>
           </div>
+          {(() => {
+            const currentBranch = BRANCHES.find((b) => b.id === selectedBranch) || BRANCHES[0];
+            return (
+              <p className="text-[11px] text-gray-500 mt-1.5 flex items-start gap-1">
+                <span className="font-bold text-gray-700 shrink-0">Address:</span>
+                <span>{currentBranch.address}</span>
+              </p>
+            );
+          })()}
         </div>
 
-        {/* Preferred Date */}
-        <div>
-          <label className="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-1.5">
-            Preferred Date *
-          </label>
-          <div className="relative">
-            <Calendar className="w-4 h-4 text-gray-400 absolute left-3 top-3" />
-            <input
-              type="date"
-              required
-              min={new Date().toISOString().split('T')[0]}
-              value={preferredDate}
-              onChange={(e) => setPreferredDate(e.target.value)}
-              className="w-full pl-9 pr-3 py-2.5 text-xs sm:text-sm border border-gray-300 rounded-sm focus:border-[#ee2326] focus:ring-1 focus:ring-[#ee2326] outline-none bg-white cursor-pointer"
-            />
+        {/* Preferred Date & Time Slot Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {/* Preferred Date */}
+          <div>
+            <label className="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-1.5">
+              Preferred Date *
+            </label>
+            <div className="relative">
+              <Calendar className="w-4 h-4 text-gray-400 absolute left-3 top-3" />
+              <input
+                type="date"
+                required
+                min={new Date().toISOString().split('T')[0]}
+                value={preferredDate}
+                onChange={(e) => setPreferredDate(e.target.value)}
+                className="w-full pl-9 pr-3 py-2.5 text-xs sm:text-sm border border-gray-300 rounded-sm focus:border-[#ee2326] focus:ring-1 focus:ring-[#ee2326] outline-none bg-white cursor-pointer"
+              />
+            </div>
+          </div>
+
+          {/* Time Slot Selector Buttons */}
+          <div>
+            <label className="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-1.5 flex items-center gap-1.5">
+              <Clock className="w-3.5 h-3.5 text-[#ee2326]" />
+              Select Time Slot *
+            </label>
+            <div className="grid grid-cols-2 gap-2">
+              {TEST_RIDE_TIME_SLOTS.map((slot) => {
+                const isSelected = selectedTimeSlot === slot;
+                return (
+                  <button
+                    type="button"
+                    key={slot}
+                    onClick={() => setSelectedTimeSlot(slot)}
+                    className={`py-2 px-2 text-[10px] sm:text-[11px] font-bold uppercase tracking-wider rounded-sm border transition-all cursor-pointer text-center ${
+                      isSelected
+                        ? 'bg-[#ee2326] text-white border-[#ee2326] shadow-sm ring-1 ring-[#ee2326]'
+                        : 'bg-gray-50 text-gray-700 border-gray-200 hover:bg-gray-100 hover:border-gray-300'
+                    }`}
+                  >
+                    {slot}
+                  </button>
+                );
+              })}
+            </div>
           </div>
         </div>
 

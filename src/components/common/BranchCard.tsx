@@ -1,7 +1,6 @@
 import React from 'react';
-import { MapPin, Phone, Clock, User, CheckCircle2, Navigation } from 'lucide-react';
+import { MapPin, Phone, Clock, CheckCircle2, Navigation } from 'lucide-react';
 import { Branch } from '../../types/branch';
-import { Button } from './Button';
 import { Badge } from './Badge';
 
 interface BranchCardProps {
@@ -53,25 +52,6 @@ export const BranchCard: React.FC<BranchCardProps> = ({ branch }) => {
         <div className="flex items-center gap-2.5 text-xs text-gray-600 mt-2">
           <Clock className="w-4 h-4 text-gray-400 shrink-0" />
           <span>{branch.hours}</span>
-        </div>
-
-        {/* General Manager Leadership */}
-        <div className="mt-4 p-3 bg-gray-50 rounded-sm border border-gray-100 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-full bg-[#181818] text-white flex items-center justify-center font-bold text-xs uppercase">
-              {branch.generalManager.name.charAt(0)}
-            </div>
-            <div>
-              <div className="text-[10px] uppercase font-bold text-gray-400">General Manager</div>
-              <div className="text-xs font-bold text-gray-900">{branch.generalManager.name}</div>
-            </div>
-          </div>
-          <a
-            href={`tel:${branch.generalManager.phone.replace(/[^0-9+]/g, '')}`}
-            className="text-xs font-bold text-[#ee2326] hover:underline"
-          >
-            {branch.generalManager.phone}
-          </a>
         </div>
 
         {/* Facilities Chips */}

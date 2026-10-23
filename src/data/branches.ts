@@ -11,10 +11,6 @@ export const BRANCHES: Branch[] = [
     phoneNumbers: ['+91 92899-22739'],
     email: 'customercare@kosmohero.in',
     hours: '09:30 AM - 07:00 PM (Monday - Sunday)',
-    generalManager: {
-      name: 'Umesh Arora',
-      phone: '+91 92899-22739',
-    },
     facilities: [
       'Flagship Two-Wheeler Showroom',
       'Computerized Service Bay',
@@ -36,10 +32,6 @@ export const BRANCHES: Branch[] = [
     phoneNumbers: ['+91 78143-03163'],
     email: 'modelhouse@kosmohero.in',
     hours: '09:30 AM - 07:00 PM (Monday - Sunday)',
-    generalManager: {
-      name: 'Raghav Ahuja',
-      phone: '+91 78143-03163',
-    },
     facilities: [
       'Comprehensive Two-Wheeler Showroom',
       'Computerized Diagnostic Bay',
@@ -59,10 +51,6 @@ export const BRANCHES: Branch[] = [
     phoneNumbers: ['+91 77173-03578'],
     email: 'busstand@kosmohero.in',
     hours: '09:30 AM - 07:00 PM (Monday - Sunday)',
-    generalManager: {
-      name: 'Pritpal Mehta',
-      phone: '+91 77173-03578',
-    },
     facilities: [
       'Full Range Vehicle Showcase',
       'Instant Test Ride Arena',
@@ -82,10 +70,6 @@ export const BRANCHES: Branch[] = [
     phoneNumbers: ['+91 70871-17350'],
     email: 'kishangarh@kosmohero.in',
     hours: '09:30 AM - 07:00 PM (Monday - Sunday)',
-    generalManager: {
-      name: 'Pawan Naialwal',
-      phone: '+91 70871-17350',
-    },
     facilities: [
       'Highway Vehicle Display Arena',
       'Computerized Express Service Bays',
@@ -105,10 +89,6 @@ export const BRANCHES: Branch[] = [
     phoneNumbers: ['+91 92899-22739'],
     email: 'customercare@kosmohero.in',
     hours: 'Opening Soon • Launching Shortly',
-    generalManager: {
-      name: 'Raghav Ahuja',
-      phone: '+91 92899-22739',
-    },
     facilities: [
       'Upcoming Next-Gen Hero Showroom',
       'Advanced Computerized Workshop Bays',

@@ -79,7 +79,7 @@ export const BranchCard: React.FC<BranchCardProps> = ({ branch }) => {
           } text-white text-xs font-bold uppercase tracking-wider transition-colors`}
         >
           <Phone className="w-3.5 h-3.5 text-white" />
-          <span>{branch.isUpcoming ? 'Enquire Early' : 'Call Branch'}</span>
+          <span>{branch.isUpcoming ? 'Enquire Early' : 'Call'}</span>
         </a>
 
         <a

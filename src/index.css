@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-hero-red: #ee2326;
+    --color-hero-red-hover: #d30000;
+    --color-hero-black: #181818;
+    --color-hero-charcoal: #232323;
+    --color-hero-gray-dark: #303030;
+    --color-hero-gray-body: #595959;
+    --color-hero-gray-light: #f5f6f7;
+    --color-hero-border: #e5e7eb;
+  }
+
+  body {
+    font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    color: #181818;
+    background-color: #ffffff;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', 'Montserrat', sans-serif;
+  }
+}
+
+/* Custom button styles */
+.hero-btn-primary {
+  background-color: #ee2326;
+  color: #ffffff;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.2s ease-in-out;
+}
+.hero-btn-primary:hover {
+  background-color: #d30000;
+  box-shadow: 0 4px 14px rgba(238, 35, 38, 0.4);
+}
+
+.hero-btn-secondary {
+  background-color: #181818;
+  color: #ffffff;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.2s ease-in-out;
+}
+.hero-btn-secondary:hover {
+  background-color: #303030;
+}
+
+.hero-btn-outline {
+  border: 2px solid #ee2326;
+  color: #ee2326;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.2s ease-in-out;
+}
+.hero-btn-outline:hover {
+  background-color: #ee2326;
+  color: #ffffff;
+}

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" width="240" height="60" fill="none">
+  <!-- Hero MotoCorp Stylized H Icon -->
+  <polygon points="12,10 26,10 40,50 26,50" fill="#EE2326" />
+  <polygon points="34,10 48,10 34,50 20,50" fill="#181818" opacity="0.9" />
+  <polygon points="22,26 42,26 38,34 18,34" fill="#EE2326" />
+  
+  <!-- Hero Text -->
+  <text x="58" y="44" font-family="'Montserrat', 'Outfit', sans-serif" font-weight="900" font-size="34" letter-spacing="-1" fill="#181818">HERO</text>
+  <text x="162" y="43" font-family="'Montserrat', sans-serif" font-weight="800" font-size="13" letter-spacing="3" fill="#EE2326">MOTOCORP</text>
+  <rect x="58" y="49" width="168" height="3" fill="#EE2326" />
+</svg>
